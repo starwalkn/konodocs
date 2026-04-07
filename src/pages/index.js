@@ -27,7 +27,7 @@ function HomepageHeader() {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                    <img src="/img/github.svg" alt="GitHub" style={{height: '1.2rem'}} />
+                    <img src="img/github.svg" alt="GitHub" style={{height: '1.2rem'}}/>
                     GitHub
                 </Link>
             </div>

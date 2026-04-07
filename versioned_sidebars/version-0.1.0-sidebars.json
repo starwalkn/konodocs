@@ -1,0 +1,15 @@
+{
+  "docsSidebar": [
+    {
+      "type": "category",
+      "label": "Docs",
+      "items": [
+        "intro",
+        "getting-started",
+        "configuration",
+        "metrics",
+        "lumos"
+      ]
+    }
+  ]
+}

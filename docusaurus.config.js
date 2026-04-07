@@ -85,10 +85,10 @@ const config = {
                 respectPrefersColorScheme: false,
             },
             announcementBar: {
-                id: 'support_us',
-                content: 'We are looking active contributores!',
-                backgroundColor: '#091E42',
-                textColor: '#fafbfc',
+                id: 'contributors',
+                content: 'We are looking active contributors',
+                backgroundColor: '#1A6FD4',
+                textColor: '#F0F4F8',
                 isCloseable: true,
             },
             navbar: {
@@ -110,56 +110,33 @@ const config = {
                         position: 'left',
                     },
                     {
+                        type: 'docsVersionDropdown',
+                        versions: ['0.1.0'],
+                        position: 'right',
+                    },
+                    {
                         href: 'https://github.com/starwalkn/kono',
-                        label: 'GitHub',
+                        className: "header-github-link",
                         position: 'right',
                     },
                 ],
             },
             footer: {
                 style: 'dark',
+                logo: {
+                    alt: 'Rabbit Origami Paper',
+                    src: 'img/rabbit-origami-paper.svg',
+                    width: 70,
+                    height: 70,
+                    href: 'https://github.com/starwalkn/kono',
+                },
                 links: [
-                    {
-                        title: 'Docs',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'X',
-                                href: 'https://x.com/docusaurus',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
-                            },
-                        ],
-                    },
+                    {title: 'Docs', items: [{label: 'Introduction', to: '/docs/intro'}]},
+                    {title: 'Support', items: [{label: 'Introduction', to: '/docs/intro'}]},
+                    {title: 'More', items: [{label: 'GitHub', href: 'https://github.com/starwalkn/kono'}]},
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Alexander Pikeev.
+                <br/>Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.nightOwlLight,

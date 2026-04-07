@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* ============================================================
+   TOKENS — Arctic Blue
+   ============================================================ */
+:root {
+    --ifm-color-primary: #1A6FD4;
+    --ifm-color-primary-dark: #1050A0;
+    --ifm-color-primary-light: #5AA3DE;
+
+    --ifm-background-color: #F0F4F8;
+    --ifm-navbar-background-color: #ffffff;
+    --ifm-sidebar-background-color: #EAF0F7;
+    --ifm-heading-color: #041E42;
+    --ifm-font-color-base: #3D5A78;
+    --ifm-font-family-base: Inter, sans-serif;
+
+    --ifm-code-font-size: 95%;
+    --ifm-code-background: #E0E8F2;
+
+    --ifm-hr-background-color: var(--kono-border-subtle);
+    --ifm-hr-height: 2px;
+    --ifm-hr-margin-vertical: 2rem;
+    --ifm-hr-margin-horizontal: 2rem;
+
+    --ifm-navbar-search-input-background-color: transparent;
+    --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%231A6FD4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z"/></svg>');
+
+    --kono-border-subtle: #dde8f4;
+
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.markdown h1,
+h2,
+h3 {
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+}
+
+.markdown p {
+    font-size: 1.05rem;
+}
+
+.markdown a {
+    font-weight: 490;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.markdown h1 {
+    font-size: 3rem;
+    text-decoration: underline var(--ifm-color-primary) 6px;
+    text-underline-offset: 18px;
+    padding-bottom: 1.8rem;
+}
+
+.markdown hr {
+    margin-top: 0.1rem;
+    margin-bottom: 1.8rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.markdown :not(pre) > code {
+    color: var(--ifm-heading-color);
+    background-color: #e8edf1;
+    border: none;
+    padding: 0.15rem 0.4rem;
+    font-family: "Roboto Mono", monospace;
+    font-size: .85em;
+    font-weight: 450;
+}
+
+.markdown pre code {
+    border: none;
+    padding: .80rem 0.8rem;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 450;
+    font-size: .90em;
+}
+
+
+/* ============================================================
+   LAYOUT — Docs pages
+   ============================================================ */
+.main-wrapper:has(.theme-doc-sidebar-container) {
+    --ifm-background-color: #F8FBFF;
+    background-color: #ffffff;
+}
+
+.main-wrapper:has(.theme-doc-sidebar-container) .theme-doc-markdown {
+    padding: 0 4rem;
+}
+
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar__logo img {
+    height: 2rem;
+    background: #EAF0F7;
+    border-radius: 13px;
+    padding: 4px;
+}
+
+.navbar__brand {
+    align-items: center;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+.navbar__search-input {
+    background: transparent url('data:image/svg+xml;utf8,<svg fill="%23dde8f4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z"/></svg>') no-repeat 0.75rem center / 1rem 1rem;
+    border: 0.1rem solid var(--kono-border-subtle);
+    border-radius: 8px;
+    color: var(--ifm-font-color-base);
+}
+
+.navbar__search .navbar__search-input:focus {
+    background: transparent url('data:image/svg+xml;utf8,<svg fill="%231A6FD4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z"/></svg>') no-repeat 0.75rem center / 1rem 1rem;
+    border: 0.15rem solid var(--ifm-color-primary);
+    box-shadow: none;
+    outline: none !important;
+}
+
+.navbar__search kbd {
+    background: var(--kono-border-subtle);
+    border: 0.1rem solid var(--kono-border-subtle);
+    border-radius: 4px;
+    color: #7A8BAD;
+    font-size: 0.75rem;
+    box-shadow: none;
+}
+
+.navbar__search:focus-within kbd {
+    background: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+    color: #EBF3FC;
+}
+
+
+/* ============================================================
+   HOME — Hero
+   ============================================================ */
+.hero__title {
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+    background: linear-gradient(
+            90deg,
+            #5AA3DE 0%,
+            #1A6FD4 25%,
+            #0A3470 50%,
+            #1A6FD4 75%,
+            #5AA3DE 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.heroBanner :global(.hero__subtitle) {
+    color: #EBF3FC;
+}
+
+.hero .button--secondary {
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+    color: #EBF3FC;
+    box-shadow: 0 4px 14px 0 rgba(26, 111, 212, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero .button--secondary:hover {
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 6px 20px 0 rgba(26, 111, 212, 0.55);
+    transform: translateY(-3px);
+}
+
+.hero .button--secondary:hover .arrow {
+    transform: translateX(4px);
+}
+
+.hero a[href*="github.com"].button--secondary {
+    background-color: #ffffff;
+    border: 1px solid var(--kono-border-subtle);
+    color: var(--ifm-heading-color);
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero a[href*="github.com"].button--secondary:hover {
+    background-color: #ffffff;
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 6px 20px 0 rgba(26, 111, 212, 0.3);
+    transform: translateY(-3px);
+}
+
+
+/* ============================================================
+   HOME — Features section
+   ============================================================ */
+.homepage-features h3,
+.homepage-features p {
+    color: var(--ifm-font-color-base);
+}

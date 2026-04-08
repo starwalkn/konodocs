@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/inter/900.css';
+
+@import '@fontsource/roboto-mono/400.css';
+@import '@fontsource/roboto-mono/700.css';
+
 
 /* ============================================================
    TOKENS — Arctic Blue
    ============================================================ */
 :root {
+    /* Colors */
     --ifm-color-primary: #1A6FD4;
     --ifm-color-primary-dark: #1050A0;
     --ifm-color-primary-light: #5AA3DE;
@@ -13,20 +22,48 @@
     --ifm-sidebar-background-color: #EAF0F7;
     --ifm-heading-color: #041E42;
     --ifm-font-color-base: #3D5A78;
-    --ifm-font-family-base: Inter, sans-serif;
 
+    --kono-border-subtle: #dde8f4;
+
+    /* Typography — fonts */
+    --kono-font-sans: Inter, sans-serif;
+    --kono-font-mono: "Roboto Mono", monospace;
+    --ifm-font-family-base: var(--kono-font-sans);
+
+    /* Typography — weights */
+    --kono-weight-body: 400;
+    --kono-weight-link: 490;
+    --kono-weight-mono: 450;
+    --kono-weight-heading: 800;
+
+    /* Typography — sizes */
+    --kono-size-hero: 70px;
+    --kono-size-h1: 2.5rem;
+    --kono-size-h2: 1.8rem;
+    --kono-size-body: 1.05rem;
+    --kono-size-code: 0.85em;
+    --kono-size-pre: 0.90em;
+
+    /* Typography — spacing */
+    --kono-h1-underline-offset: 18px;
+    --kono-h1-underline-thickness: 6px;
+    --kono-h1-padding-bottom: 1.8rem;
+    --kono-link-underline-thickness: 2px;
+    --kono-link-underline-offset: 3px;
+
+    /* Code */
     --ifm-code-font-size: 95%;
     --ifm-code-background: #E0E8F2;
 
+    /* HR */
     --ifm-hr-background-color: var(--kono-border-subtle);
     --ifm-hr-height: 2px;
     --ifm-hr-margin-vertical: 2rem;
     --ifm-hr-margin-horizontal: 2rem;
 
+    /* Search */
     --ifm-navbar-search-input-background-color: transparent;
     --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%231A6FD4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z"/></svg>');
-
-    --kono-border-subtle: #dde8f4;
 
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -38,26 +75,26 @@
 .markdown h1,
 h2,
 h3 {
-    font-family: Inter, sans-serif;
-    font-weight: 900;
+    font-family: var(--kono-font-sans), serif;
+    font-weight: var(--kono-weight-heading);
 }
 
 .markdown p {
-    font-size: 1.05rem;
+    font-size: var(--kono-size-body);
 }
 
 .markdown a {
-    font-weight: 490;
+    font-weight: var(--kono-weight-link);
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
+    text-decoration-thickness: var(--kono-link-underline-thickness);
+    text-underline-offset: var(--kono-link-underline-offset);
 }
 
 .markdown h1 {
-    font-size: 3rem;
-    text-decoration: underline var(--ifm-color-primary) 6px;
-    text-underline-offset: 18px;
-    padding-bottom: 1.8rem;
+    font-size: var(--kono-size-h1);
+    text-decoration: underline var(--ifm-color-primary) var(--kono-h1-underline-thickness);
+    text-underline-offset: var(--kono-h1-underline-offset);
+    padding-bottom: var(--kono-h1-padding-bottom);
 }
 
 .markdown hr {
@@ -66,7 +103,7 @@ h3 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: var(--kono-size-h2);
 }
 
 .markdown :not(pre) > code {
@@ -74,17 +111,17 @@ h2 {
     background-color: #e8edf1;
     border: none;
     padding: 0.15rem 0.4rem;
-    font-family: "Roboto Mono", monospace;
-    font-size: .85em;
-    font-weight: 450;
+    font-family: var(--kono-font-mono);
+    font-size: var(--kono-size-code);
+    font-weight: var(--kono-weight-mono);
 }
 
 .markdown pre code {
     border: none;
-    padding: .80rem 0.8rem;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 450;
-    font-size: .90em;
+    padding: 0.80rem 0.8rem;
+    font-family: var(--kono-font-mono);
+    font-weight: var(--kono-weight-mono);
+    font-size: var(--kono-size-pre);
 }
 
 
@@ -153,9 +190,9 @@ h2 {
    HOME — Hero
    ============================================================ */
 .hero__title {
-    font-family: Inter, sans-serif;
-    font-weight: 900;
-    font-size: 70px;
+    font-family: var(--kono-font-sans);
+    font-weight: var(--kono-weight-heading);
+    font-size: var(--kono-size-hero);
     background: linear-gradient(
             90deg,
             #5AA3DE 0%,
@@ -212,6 +249,7 @@ h2 {
     transform: translateY(-3px);
 }
 
+
 /* ============================================================
    HOME — Features section
    ============================================================ */
@@ -220,6 +258,10 @@ h2 {
     color: var(--ifm-font-color-base);
 }
 
+
+/* ============================================================
+   NAVBAR — GitHub icon
+   ============================================================ */
 .header-github-link:hover {
     opacity: 0.6;
 }
@@ -232,15 +274,78 @@ h2 {
     width: 24px;
 }
 
-[class*='announcementBar'], .clean-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    background-color: #041E42;
+}
+
+.footer .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex-shrink: 0;
+    order: -1;
+}
+
+.footer__bottom .margin-bottom--sm {
+    margin-bottom: 0.75rem;
+}
+
+.footer__copyright {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.footer__links {
+    flex: 1;
+    margin: 0;
+    margin-left: 6rem;
+}
+
+
+/* ============================================================
+   ANNOUNCEMENT BAR
+   ============================================================ */
+[role="banner"].theme-announcement-bar {
+    background: linear-gradient(
+            90deg,
+            rgba(90, 163, 222, 0.6) 0%,
+            rgba(26, 111, 212, 0.6) 25%,
+            rgba(10, 52, 112, 0.6) 50%,
+            rgba(26, 111, 212, 0.6) 75%,
+            rgba(90, 163, 222, 0.6) 100%
+    ),
+    repeating-linear-gradient(
+            -45deg,
+            #1A6FD4,
+            #1A6FD4 10px,
+            #5AA3DE 10px,
+            #5AA3DE 20px
+    ) !important;
+    background-size: 200% auto, auto !important;
+    animation: shimmer 4s linear infinite;
     font-weight: 600;
-    /*background: linear-gradient(*/
-    /*        90deg,*/
-    /*        #5AA3DE 0%,*/
-    /*        #0A3470 50%,*/
-    /*        #5AA3DE 100%*/
-    /*);*/
-    /*background-size: 200% auto;*/
+}
+
+[role="banner"].theme-announcement-bar button {
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   DOCS — Version badge
+   ============================================================ */
+.theme-doc-version-badge {
+    float: right;
+    margin-top: -2.5rem;
 }

@@ -7,6 +7,13 @@ slug: /lumos
 
 # Lumos
 
+:::warning Experimental
+
+Lumos is currently experimental. There is no stable SDK yet, and the wire protocol may change between releases.
+We do not recommend using Lumos in production until a stable API is published.
+
+:::
+
 **Lumos** is Kono's built-in Lua scripting engine. It allows you to modify incoming requests before they are dispatched
 to upstreams — without writing Go plugins or recompiling the gateway.
 

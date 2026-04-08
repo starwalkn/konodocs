@@ -1,12 +1,5 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,28 +7,19 @@ const config = {
     tagline: 'Kono is a lightweight API Gateway in Go — parallel fan-out, flexible aggregation, and zero configuration magic.',
     favicon: 'img/rabbit-origami-paper.svg',
 
-    // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
-        v4: true, // Improve compatibility with the upcoming Docusaurus v4
+        v4: true,
     },
 
-    // Set the production url of your site here
     url: 'https://your-docusaurus-site.example.com',
-    // Set the /<baseUrl>/ pathname under which your site is served
-    // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/konodocs',
 
-    // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'starwalkn', // Usually your GitHub org/user name.
-    projectName: 'konodocs', // Usually your repo name.
+    organizationName: 'starwalkn',
+    projectName: 'konodocs',
     trailingSlash: false,
 
     onBrokenLinks: 'throw',
 
-    // Even if you don't use internationalization, you can use this field to set
-    // useful metadata like html lang. For example, if your site is Chinese, you
-    // may want to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],
@@ -49,21 +33,7 @@ const config = {
                 docs: {
                     sidebarPath: './sidebars.js',
                 },
-                blog: {
-                    showReadingTime: true,
-                    feedOptions: {
-                        type: ['rss', 'atom'],
-                        xslt: true,
-                    },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-                    // Useful options to enforce blogging best practices
-                    onInlineTags: 'warn',
-                    onInlineAuthors: 'warn',
-                    onUntruncatedBlogPosts: 'warn',
-                },
+                blog: false,
                 theme: {
                     customCss: './src/css/custom.css',
                 },
@@ -74,7 +44,6 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             colorMode: {
                 defaultMode: 'light',
@@ -83,7 +52,7 @@ const config = {
             },
             announcementBar: {
                 id: 'contributors',
-                content: 'We are looking active contributors',
+                content: 'We are looking for active contributors',
                 backgroundColor: '#1A6FD4',
                 textColor: '#F0F4F8',
                 isCloseable: true,
@@ -108,12 +77,11 @@ const config = {
                     },
                     {
                         type: 'docsVersionDropdown',
-                        versions: ['0.1.0'],
                         position: 'right',
                     },
                     {
                         href: 'https://github.com/starwalkn/kono',
-                        className: "header-github-link",
+                        className: 'header-github-link',
                         position: 'right',
                     },
                 ],
@@ -128,12 +96,51 @@ const config = {
                     href: 'https://github.com/starwalkn/kono',
                 },
                 links: [
-                    {title: 'Docs', items: [{label: 'Introduction', to: '/docs/intro'}]},
-                    {title: 'Support', items: [{label: 'Introduction', to: '/docs/intro'}]},
-                    {title: 'More', items: [{label: 'GitHub', href: 'https://github.com/starwalkn/kono'}]},
+                    {
+                        title: 'Docs',
+                        items: [
+                            {label: 'Introduction',   to: '/docs/intro'},
+                            {label: 'Getting Started', to: '/docs/getting-started'},
+                            {label: 'Configuration',  to: '/docs/configuration'},
+                            {label: 'Metrics',        to: '/docs/metrics'},
+                        ],
+                    },
+                    {
+                        title: 'Community',
+                        items: [
+                            {
+                                label: 'GitHub Discussions',
+                                href: 'https://github.com/starwalkn/kono/discussions',
+                            },
+                            {
+                                label: 'GitHub Issues',
+                                href: 'https://github.com/starwalkn/kono/issues',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'More',
+                        items: [
+                            {
+                                label: 'GitHub',
+                                href: 'https://github.com/starwalkn/kono',
+                            },
+                            {
+                                label: 'Releases',
+                                href: 'https://github.com/starwalkn/kono/releases',
+                            },
+                            {
+                                label: 'pkg.go.dev',
+                                href: 'https://pkg.go.dev/github.com/starwalkn/kono',
+                            },
+                            {
+                                label: 'Docker Hub',
+                                href: 'https://hub.docker.com/r/starwalkn/kono',
+                            },
+                        ],
+                    },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Alexander Pikeev.
-                <br/>Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Alexander Pikeev.<br/>Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.nightOwlLight,

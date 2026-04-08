@@ -18,6 +18,8 @@
     "@docusaurus/preset-classic": "3.9.2",
     "@docusaurus/theme-mermaid": "^3.9.2",
     "@easyops-cn/docusaurus-search-local": "^0.55.1",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/roboto-mono": "^5.2.8",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",

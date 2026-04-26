@@ -19,7 +19,16 @@ const sidebars = {
         {
             type: 'category',
             label: 'Docs',
-            items: ['intro', 'getting-started', 'configuration', 'metrics', 'lumos']
+            items: [
+                'intro',
+                'getting-started',
+                'configuration',
+                'response-format',
+                'metrics',
+                'plugin-development',
+                'builtins',
+                'passthrough'
+            ]
         },
     ],
 };

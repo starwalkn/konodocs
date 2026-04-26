@@ -4,9 +4,8 @@
 @import '@fontsource/inter/800.css';
 @import '@fontsource/inter/900.css';
 
-@import '@fontsource/roboto-mono/400.css';
-@import '@fontsource/roboto-mono/700.css';
-
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/700.css';
 
 /* ============================================================
    TOKENS — Arctic Blue
@@ -27,7 +26,7 @@
 
     /* Typography — fonts */
     --kono-font-sans: Inter, sans-serif;
-    --kono-font-mono: "Roboto Mono", monospace;
+    --kono-font-mono: "JetBrains Mono", monospace;
     --ifm-font-family-base: var(--kono-font-sans);
 
     /* Typography — weights */

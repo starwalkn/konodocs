@@ -244,22 +244,4 @@ middlewares:
 
 Middlewares use the same `name`, `source`, `path`, and `config` fields as plugins. They wrap the entire flow handler and execute in the order defined — outermost first. Built-in middlewares include `recoverer`, `logger`, `auth`, and `compressor`.
 
-## Lumos Scripts
----
-
-```yaml
-scripts:
-  - source: file
-    path: /etc/kono/scripts/auth.lua
-```
-
-Lua scripts run before upstream dispatch. They communicate with the gateway over a Unix socket using a length-prefixed JSON protocol — no additional network hop compared to a sidecar approach.
-
-A script returns one of two actions:
-
-- `continue` — proceed with the (optionally modified) request
-- `abort` — reject the request with a specified HTTP status
-
-See [Lumos](./lumos.md) for the full scripting reference.
-
 ---
